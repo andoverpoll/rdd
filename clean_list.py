@@ -2,7 +2,7 @@
 USER_ID = 'USER_ID'
 API_KEY = 'API_KEY'
 INPUT_FILENAME = 'number_list.csv'
-OUTPUT_FILENAME = 'valid_numbers.csv'
+OUTPUT_FILENAME = 'valid_numbers.txt'
 COLUMNS_TO_RUN = 22
 INITIAL_CALLS_REMAINING = 100000
 INITIAL_VALID_NUMBERS = 0
@@ -26,7 +26,7 @@ calls = 0
 col = START_COLUMN
 
 while col < COLUMNS_TO_RUN + START_COLUMN and len(valid_numbers) + INITIAL_VALID_NUMBERS < TARGET_SAMPLE_SIZE:
-    for row in number_list:
+    for row in numbers_array:
         params = {
           'user-id': USER_ID,
           'api-key': API_KEY,
